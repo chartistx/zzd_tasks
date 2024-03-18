@@ -94,7 +94,7 @@ SELECT first_name,
         (subtotal_amount-SUM(amount)) AS unpaid_amount,
         CASE
         	WHEN subtotal_amount-SUM(amount)>0 
-            	OR SUM(payed_late)>0
+            	OR SUM(paied_late)>0
             THEN 'Y'
             ELSE 'N'
         END AS piezīme
@@ -107,7 +107,7 @@ FROM(SELECT 	invoices.invoice_id,
     	WHEN payments.pay_date>invoices.due_date
         THEN 1
         ELSE 0
-    END AS payed_late   
+    END AS paied_late   
 FROM invoices
 JOIN orders ON orders.order_id = invoices.order_id
 JOIN customers ON customers.customer_id = orders.customer_id
