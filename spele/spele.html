@@ -1,0 +1,21 @@
+
+<!-- Pogām pievienoju on click funkciju izsaukšanu --> 
+
+<body>
+    <h1>Uzmini skaitli!</h1>
+    <label id="numberLabel" for="number"> Skaitlis minēšanai no 1 līdz 100</label>
+    
+    
+    <input type="number" id="number">
+    <input type="submit" id="submitNumber" value="Ievadīt" onclick="getVal()">
+    <p>  </p>
+    
+    <div id = "answer" style="visibility: hidden">
+    <p>Tiek uzminēts skaitlis no 1 līdz 100. Tev ir 8 mēģinājumi, lai uzminētu šo skaitli!</p>
+    <label for="guess">Minējums</label>
+    <input type="number" id="guess">
+    <input type="submit" id="submitGuess" value="Minēt" onclick="vaiPareizi()">
+    </div>  
+    <!-- Paskaidrojošais teksts --> 
+    <p id="feedback"></p>
+  </body>
